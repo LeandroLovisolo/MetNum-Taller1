@@ -36,7 +36,7 @@ function [P,L,U]=lu_con_pivoteo_y_cotas(A, tipo_matriz)
          if tipo_matriz == 1
             cumple_cota = (ak <= (k + 1) * a0);
          else
-            cumple_cota = (max(ak_anteriores)) <= 2*a0
+            cumple_cota = (max(ak_anteriores)) <= 2*a0;
          end
       end
 
@@ -44,6 +44,4 @@ function [P,L,U]=lu_con_pivoteo_y_cotas(A, tipo_matriz)
       if !cumple_cota, printf("NO "); end
       printf("cumple con la cota.\n");
    end
-
-   ak_anteriores
 end
